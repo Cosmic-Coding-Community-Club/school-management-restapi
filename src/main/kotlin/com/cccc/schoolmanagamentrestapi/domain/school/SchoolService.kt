@@ -4,7 +4,7 @@ class SchoolService(
     private val schoolRepository: SchoolRepository
 ) {
     
-    fun createSchool() {
-        schoolRepository.
-    }
+    fun createSchool(name: String) =
+        schoolRepository.create(name)
+    
 }

@@ -4,7 +4,8 @@ import reactor.core.publisher.Mono
 
 interface SchoolRepository {
     
-    fun createSchool(name: String): Mono<School>
-    fun readSchool(identifier : String): Mono<School>
+    fun create(name: String): Mono<School>
+    
+    fun read(identifier : String): Mono<School>
     
 }

@@ -9,20 +9,18 @@ class MemorySchoolRepository(
     private val schoolMapper: SchoolMapper
 ) : SchoolRepository {
     
-    private val schools: MutableList<SchoolDataModel> = mutableListOf()
+    private val schools: MutableMap<String, SchoolDataModel> = mutableMapOf()
     
-    override fun createSchool(name: String): Mono<School> =
+    override fun create(name: String): Mono<School> =
         Mono.just(SchoolDataModel(UUID.randomUUID().toString(), name))
-            .doOnNext { schools.add(it) }
+            .doOnNext { schools[it.identifier] = it }
             .map(schoolMapper::map)
     
-    override fun readSchool(identifier: String): Mono<School> =
+    override fun read(identifier: String): Mono<School> =
         Mono.fromCallable {
-            schools.firstOrNull { identifier == it.identifier }
-                ?: throw RuntimeException()
+            schools[identifier] ?: throw RuntimeException()
         }
             .map(schoolMapper::map)
-    
     
     
 }
