@@ -1,6 +1,6 @@
-package com.cccc.schoolmanagamentrestapi.infrastructure.classroom
+package com.cccc.schoolmanagamentrestapi.domain.classroom
 
-data class ClassRoomDataModel(
+data class Classroom(
     val identifier: String,
     val name: String,
     val code : String,
