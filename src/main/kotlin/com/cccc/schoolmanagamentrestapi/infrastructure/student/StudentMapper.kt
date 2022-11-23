@@ -10,7 +10,7 @@ class StudentMapper {
             firstName = firstName,
             lastName = lastName,
             phone = phone,
-            assignedClassroomIdentifier = assignedClassroomIdentifier
+            assignedClassroom = assignedClassroom
         )
     }
     
@@ -20,7 +20,7 @@ class StudentMapper {
             firstName = firstName,
             lastName = lastName,
             phone = phone,
-            assignedClassroomIdentifier = assignedClassroomIdentifier
+            assignedClassroom = assignedClassroom
         )
     }
     

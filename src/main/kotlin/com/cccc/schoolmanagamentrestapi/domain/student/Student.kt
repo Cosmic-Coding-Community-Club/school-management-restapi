@@ -5,5 +5,5 @@ data class Student(
     val firstName: String,
     val lastName: String,
     val phone: String,
-    val assignedClassroomIdentifier : String
+    val assignedClassroom : String
 )

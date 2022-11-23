@@ -15,7 +15,6 @@ class CreateSchoolApplicationService(
 ) {
     
     fun createSchool(createSchoolApplicationModel: CreateSchoolApplicationModel): Mono<QuerySchoolApplicationModel> {
-        
         return Mono.just(createSchoolApplicationModel)
             .flatMap { schoolService.createSchool(it.schoolName) }
             .flatMapMany { school ->
@@ -54,6 +53,4 @@ class CreateSchoolApplicationService(
                 )
             }
     )
-    
-    
 }
