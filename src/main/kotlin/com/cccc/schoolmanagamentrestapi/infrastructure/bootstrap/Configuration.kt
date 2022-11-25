@@ -13,7 +13,6 @@ import com.cccc.schoolmanagamentrestapi.infrastructure.student.StudentMapper
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-
 @Configuration
 class Configuration {
     
@@ -46,3 +45,5 @@ class Configuration {
     
     
 }
+
+

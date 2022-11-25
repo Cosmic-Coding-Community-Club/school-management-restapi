@@ -18,18 +18,17 @@ repositories {
 dependencies {
     
     //Starters
-    implementation("org.springframework.boot:spring-boot-starter"){
-        exclude("jackson")
-    }
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    //implementation("org.springframework.boot:spring-boot-starter-webflux")
     
     // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     
-    // Jackson Kotlin
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.1")
-	
+    implementation("io.projectreactor:reactor-core:3.5.0")
+    
     // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
