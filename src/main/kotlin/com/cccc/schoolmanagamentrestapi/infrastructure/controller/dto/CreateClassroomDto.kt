@@ -1,7 +1,7 @@
 package com.cccc.schoolmanagamentrestapi.infrastructure.controller.dto
 
-data class CreateClassroomDto @JvmOverloads constructor(
-    val name: String,
-    val code: String,
-    val capacity: Int
+data class CreateClassroomDto(
+    val name: String = "",
+    val code: String = "",
+    val capacity: Int = -1
 )

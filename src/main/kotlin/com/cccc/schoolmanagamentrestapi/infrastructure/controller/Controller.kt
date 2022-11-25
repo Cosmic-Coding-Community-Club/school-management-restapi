@@ -20,7 +20,8 @@ class Controller(
     
     
     @RequestMapping(method = [POST], consumes = [MediaType.APPLICATION_JSON_VALUE])
-    fun createSchool(@RequestBody createSchoolDto: CreateSchoolDto): Mono<QuerySchoolApplicationModel> {
+    fun createSchool(@RequestBody createSchoolDto: CreateSchoolDto
+    ): Mono<QuerySchoolApplicationModel> {
         return Mono.just(createSchoolDto)
             .filter(validate())
             .map { dto ->
