@@ -8,6 +8,7 @@ import com.cccc.schoolmanagamentrestapi.domain.classroom.ClassroomService
 import com.cccc.schoolmanagamentrestapi.domain.school.SchoolService
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import reactor.util.function.Tuples
 
 class CreateSchoolApplicationService(
     private val schoolService: SchoolService,
@@ -18,12 +19,10 @@ class CreateSchoolApplicationService(
         return Mono.just(createSchoolApplicationModel)
             .flatMap { schoolService.createSchool(it.schoolName) }
             .flatMapMany { school ->
-                Flux.fromIterable(
-                    createSchoolApplicationModel.createClassroomApplicationModel
-                        .map { it.copy(schoolIdentifier = school.identifier) }
-                )
+                Flux.fromIterable(createSchoolApplicationModel.classrooms)
+                    .map { classroom -> Tuples.of(school, classroom) }
             }
-            .flatMap { classroomService.create(it.name, it.code, it.capacity, it.schoolIdentifier) }
+            .flatMap { classroomService.create(it.t2.name, it.t2.code, it.t2.capacity, it.t1.identifier) }
             .collectList()
             .map { classroomList ->
                 mapToQueryClassroom(
