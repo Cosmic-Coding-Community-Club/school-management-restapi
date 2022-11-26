@@ -6,6 +6,7 @@ import com.cccc.schoolmanagamentrestapi.domain.classroom.ClassroomService
 import com.cccc.schoolmanagamentrestapi.domain.school.SchoolRepository
 import com.cccc.schoolmanagamentrestapi.domain.school.SchoolService
 import com.cccc.schoolmanagamentrestapi.infrastructure.classroom.MemoryClassroomRepository
+import com.cccc.schoolmanagamentrestapi.infrastructure.controller.CreateSchoolDtoMapper
 import com.cccc.schoolmanagamentrestapi.infrastructure.school.MemorySchoolRepository
 import com.cccc.schoolmanagamentrestapi.infrastructure.school.SchoolMapper
 import com.cccc.schoolmanagamentrestapi.infrastructure.student.MemoryStudentRepository
@@ -43,7 +44,8 @@ class Configuration {
     @Bean
     fun classroomRepository() = MemoryClassroomRepository()
     
-    
+    @Bean
+    fun createSchoolDtoMapper() = CreateSchoolDtoMapper()
 }
 
 
