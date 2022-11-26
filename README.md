@@ -6,7 +6,7 @@
 <br />
 <div align="center">
 
-![Logo](etc/images/spring_boot_logo.png)
+![Logo](etc/images/reactor_logo.png)
 
 <h1 align="center">School Management RestAPI</h1>
   <p align="center">
