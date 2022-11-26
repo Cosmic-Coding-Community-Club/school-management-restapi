@@ -10,7 +10,7 @@
 
 <h1 align="center">School Management RestAPI</h1>
   <p align="center">
-    Kotlin, Reactor, webflux and Spring Boot RestAPI of school management application.
+    School Management RestAPI Application using Kotlin, Reactor, Webflux and Spring Boot application.
     <br/>
   </p>
 </div>
