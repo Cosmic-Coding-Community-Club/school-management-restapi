@@ -10,7 +10,7 @@
 
 <h1 align="center">School Management RestAPI</h1>
   <p align="center">
-    Kotlin, Reactor and Spring Boot RestAPI of school management application.
+    Kotlin, Reactor, webflux and Spring Boot RestAPI of school management application.
     <br/>
   </p>
 </div>
@@ -32,18 +32,19 @@
 
 ## About The Project
 
-This application is an example of School Management, created using Kotlin, Reactor and Spring Boot.
+This application is an example of School Management, created using Kotlin, Reactor, Webflux and Spring Boot.
 The architecture is based en hexagonal architecture and DDD principles.
 
 <b>NOTE: In this example just implemented one use case: create School and your classrooms.
 In order to learn is interesting that the student implement the rest of use case.</b>
 
-#### What you will learn in this?
+#### What you will learn?
 
 * Organization of layers using hexagonal architecture and DDD principles.
 * Spring boot web starter and web.
 * Reactive programming with Reactor.
 * Reactive api with Reactor Webflux.
+* Errors handlers.
 * The integration between Kotlin with Spring.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
